@@ -1,0 +1,52 @@
+//Login Page
+@import "../less/variables.less";
+@import "../less/mixins.less";
+
+
+//These are the general function
+@color: #f5f5f5;
+@bgcolor: #005BC3;
+@colorh2: #FFAC40;
+.header(@bgcolor, @color, @height:120px, @marginB:3%)
+    {
+    background: @bgcolor;    
+    color: @color;
+    height:@height;
+    margin-bottom:@marginB;
+    padding:0;
+     }
+.h1(@color @paddingTop:2%, @paddingBottom:3%){
+    color:@color;
+    text-align:center;
+    padding-top:@paddingTop;
+    padding-bottom:@paddingBottom;
+    }
+.h2(@colorh2){
+    color:@colorh2;
+    }
+    
+//The functions are being called here
+header{ 
+    .header(@bgcolor, @color);   
+    .make-row();     
+} 
+header h1{
+    .h1(@color);
+    .make-xs-column(12);
+    .make-sm-column(12);
+    .make-md-column(12);
+    .make-lg-column(12);
+    }
+section{
+    .make-xs-column(10);  
+    .make-sm-column(10);
+    .make-md-column(10);
+    .make-lg-column(10); 
+    .make-xs-column-offset(1);
+    .make-sm-column-offset(1);
+    .make-md-column-offset(1);
+    .make-lg-column-offset(1);    
+}
+section h2{
+    .h2(@colorh2);
+    }

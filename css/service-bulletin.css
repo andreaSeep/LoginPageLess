@@ -1,0 +1,27 @@
+.attention {
+/*	width: 378px;*/
+	text-align: left; 	border: 1px solid #f8e19c;
+	background: #fff4d3 url(/shared/css/attention.gif) 12px 11px no-repeat;
+	padding: 10px 10px 10px 30px;
+/*	margin: 5px 1% 5px 1%;*/
+	color: #db8d0d;
+}
+
+a.rss-item {
+	font-weight: bold;
+}
+
+.attention a, .attention a:visited {
+	color: #4487db;
+	text-decoration: none;
+ /*	font-weight: bold;*/
+}
+
+.attention a:hover, .attention a:focus {
+	text-decoration: underline;
+}
+
+.post-title {
+	font-weight: bold;
+	color: red !important;
+}

@@ -1,0 +1,148 @@
+//Login Page
+@import "../less/variables.less";
+@import "../less/mixins.less";
+
+
+//These are the general function
+@color: #f5f5f5;
+@bgcolor: #003C79;
+@colorh2: #FFAC40;
+
+.bgImg(@bgcolor, @url, @repeat:no-repeat, @position){
+    background:@bgcolor @url @repeat @position;
+    }
+.bgGradient(@position @colorStart, @per1, @colorStop, @per2){
+	background: -moz-linear-gradient(@position, @colorStart @per1, @colorStop, @per2);
+//	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #babab9));
+	background: -webkit-linear-gradient(@position, @colorStart @per1, @colorStop @per2);
+	background: -o-linear-gradient(@position, @colorStart @per1, @colorStop @per2);
+	background: -ms-linear-gradient(@position, @colorStart @per1, @colorStop @per2);
+//	background: linear-gradient(to bottom, @colorStart @per1, #babab9 100%);
+}
+
+
+//Mixin calls in css    
+    
+body {	
+    .bgImg(@bgcolor, url("../images/gateway.jpg"), no-repeat, center);
+}
+
+#service-bulletin{
+	background:@color;
+	height:auto;
+	padding-top:2%;
+	padding-bottom:2%;
+    .make-xs-column(12);  
+    .make-sm-column(12);
+    .make-md-column(12);
+    .make-lg-column(12);
+  	}
+
+#service-bulletin p:first-child{
+    .make-xs-column(3);  
+    .make-sm-column(2);
+    .make-md-column(1);
+    .make-lg-column(1); 
+  
+    .make-sm-column-offset(1);
+    .make-md-column-offset(1);
+    .make-lg-column-offset(1);  
+    }
+    
+#service-bulletin p:last-child{
+    .make-xs-column(9);  
+    .make-sm-column(9);
+    .make-md-column(9);
+    .make-lg-column(9);   
+    }
+#service-bulletin p span{
+	color:#C33;
+	padding:3%;
+}
+
+.panel {.make-xs-column(4);  
+    .make-sm-column(4);
+    .make-md-column(4);
+    .make-lg-column(4);   
+    .make-xs-column-offset(4);
+    .make-sm-column-offset(4);
+    .make-md-column-offset(4);
+    .make-lg-column-offset(4); 
+    .bgGradient(top, #fefefe, 0%, #babab9, 100%);
+    border: none;
+	margin-top:10%;
+
+	padding: 3% 0 2% 0;
+	width: 310px;
+	border-radius: 8px;
+	height: 420px;
+	box-shadow: 0px 1px 3px 0px #aaa;
+	text-align:center;   
+    }
+
+.panel-heading {
+	text-align:center;
+	padding: 0px; 
+}
+.panel-heading h1{
+	font-size: 1.75em;
+	color: #555;
+}
+
+.panel-watermark {
+   .bgImg(none, url("https://testlearn.bcit.ca/shared/images/watermark3.png"), no-repeat, right bottom);
+	height: 313px;
+}
+
+.panel .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 9px;
+	font-size: 18px;
+}
+.panel input[type="username"] {
+	margin-bottom: 3%;
+}
+.panel input[type="password"] {
+	margin-bottom: 5%;
+}
+.btn-primary {
+	background-color: #F28732;
+	border: 0;
+}
+.btn-primary:hover {
+	background-color: #f37e20;
+	border: 0;
+}
+
+footer div{
+    .make-xs-column(12);  
+    .make-sm-column(12);
+    .make-md-column(12);
+    .make-lg-column(12);  
+    }
+
+footer {
+	opacity: 0.7;
+	filter: alpha(opacity=40); /* For IE8 and earlier */
+	background-color: #fff;
+	width:100%;
+	height: 20px;
+	padding-bottom: 30px;
+	padding-top: 10px;
+	position: fixed;
+	bottom: 0px;	
+}
+
+footer ul li a:hover{
+	text-decoration:none;
+	opacity: 0.6;	
+	}
+footer ul li span{
+	color:#428bca;
+	margin-right:2px;
+	}
+
